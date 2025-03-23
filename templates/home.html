@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<title>Home Page</title>
+{% endblock %}
+
+{% block body_content %}
+{% for post in posts %}
+<div class="mb-10 container-fluid">
+  <div class="card card-top-margin" style="width: 25rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{post.title}}</h5>
+      <h6 class="card-subtitle mb-2 text-body-secondary">{{post.date}}</h6>
+      <p class="card-text">{{post.content}}</p>
+      <h6 class="card-subtitle mb-2 text-body-secondary">By - {{post.author}}</h6>
+    </div>
+</div>
+
+</div>
+
+{% endfor %}
+{% endblock %}
